@@ -57,25 +57,25 @@ class GreenSquareWidgetState extends State<GreenSquareWidget>
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                RaisedButton(
+                ElevatedButton(
                   child: const Text('Start'),
                   onPressed: () {
                     _animationController.forward();
                   },
                 ),
-                RaisedButton(
+                ElevatedButton(
                   child: const Text('Stop'),
                   onPressed: () {
                     _animationController.stop();
                   },
                 ),
-                RaisedButton(
+                ElevatedButton(
                   child: const Text('Reset'),
                   onPressed: () {
                     _animationController.reset();
                   },
                 ),
-                RaisedButton(
+                ElevatedButton(
                   child: const Text('Reverse'),
                   onPressed: () {
                     _animationController.reverse();

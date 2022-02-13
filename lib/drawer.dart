@@ -1,7 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:scratch_01/hero.dart';
+import 'package:scratch_01/physics.dart';
 import 'package:scratch_01/scale.dart';
+import 'package:scratch_01/tween_demo.dart';
 
 import 'animated_container.dart';
+import 'color_tween.dart';
+import 'goal_tracker.dart';
+import 'goal_tracker2.dart';
 import 'green_scale_widget.dart';
 import 'main.dart';
 
@@ -10,18 +16,30 @@ class MyDrawer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    List<ListTile> links = List.generate(4, (int idx) {
+    List<ListTile> links = List.generate(9, (int idx) {
       String title = [
         'Slider Animation',
         'Timer Animation',
         'Container Animation',
-        'Animated Container'
+        'Animated Container',
+        'Tween Demo',
+        'Color Tween Demo',
+        'Goal Tracker',
+        'Goal Tracker 2',
+        'Hero Widget',
+        'Physics Widget'
       ][idx];
-      StatefulWidget Function() navWidget = [
+      Widget Function() navWidget = [
         () => SliderAnimation(),
         () => TimerAnimation(),
         () => ContainerAnimation(),
-        () => GreenSquareWidget()
+        () => GreenSquareWidget(),
+        () => TweenDemoWidget(),
+        () => ColorTweenDemoWidget(),
+        () => const HomeWidget(),
+        () => HomeWidget2(),
+        () => const HeroWidget(),
+        () => PhysicsWidget()
       ][idx];
       return ListTile(
         title: Text(title),
